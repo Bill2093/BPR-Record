@@ -24,8 +24,11 @@ public partial class Form1 : Form
         // Evento para colorear filas como Excel
         dgvBattles.CellFormatting += DgvBattles_CellFormatting;
 
+        txtProductionAmount.TextChanged += (_, __) => UpdateProductionResult();
+
         // Primera carga
         Recalculate();
+        UpdateProductionResult();
     }
 
     private void Recalculate()
@@ -119,5 +122,17 @@ public partial class Form1 : Form
             new() { IllusionStrength = 1830, Name = "Crimson Foxen" },
             new() { IllusionStrength = 2230, Name = "Flamehorn" },
         };
+    }
+
+    private void UpdateProductionResult()
+    {
+        if (!int.TryParse(txtProductionAmount.Text, out int amount) || amount < 0)
+        {
+            txtProductionResult.Text = string.Empty;
+            return;
+        }
+
+        int requiredMaterial = amount * 8;
+        txtProductionResult.Text = requiredMaterial.ToString();
     }
 }
