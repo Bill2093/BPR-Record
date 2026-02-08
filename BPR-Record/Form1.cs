@@ -129,11 +129,15 @@ public partial class Form1 : Form
         if (!int.TryParse(txtProductionAmount.Text, out int amount) || amount < 0)
         {
             txtProductionResult.Text = string.Empty;
+            txtLifeSkillCost.Text = string.Empty;
             return;
         }
 
         int requiredMaterial = amount * 8;
         txtProductionResult.Text = requiredMaterial.ToString();
+
+        int lifeSkillCost = amount * 10;
+        txtLifeSkillCost.Text = lifeSkillCost.ToString();
     }
 
     private void Form1_Load(object sender, EventArgs e)

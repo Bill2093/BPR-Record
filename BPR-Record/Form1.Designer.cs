@@ -36,6 +36,8 @@
             tabIllusionStrength = new TabPage();
             tabProduction = new TabPage();
             panelProduction = new Panel();
+            txtLifeSkillCost = new TextBox();
+            lblLifeSkillCost = new Label();
             txtProductionResult = new TextBox();
             lblProductionResult = new Label();
             txtProductionAmount = new TextBox();
@@ -126,6 +128,8 @@
             // 
             // panelProduction
             // 
+            panelProduction.Controls.Add(txtLifeSkillCost);
+            panelProduction.Controls.Add(lblLifeSkillCost);
             panelProduction.Controls.Add(txtProductionResult);
             panelProduction.Controls.Add(lblProductionResult);
             panelProduction.Controls.Add(txtProductionAmount);
@@ -134,8 +138,26 @@
             panelProduction.Location = new Point(3, 3);
             panelProduction.Name = "panelProduction";
             panelProduction.Padding = new Padding(16);
-            panelProduction.Size = new Size(746, 132);
+            panelProduction.Size = new Size(746, 191);
             panelProduction.TabIndex = 0;
+            // 
+            // txtLifeSkillCost
+            // 
+            txtLifeSkillCost.Location = new Point(16, 159);
+            txtLifeSkillCost.Name = "txtLifeSkillCost";
+            txtLifeSkillCost.ReadOnly = true;
+            txtLifeSkillCost.Size = new Size(200, 27);
+            txtLifeSkillCost.TabIndex = 5;
+            txtLifeSkillCost.TextAlign = HorizontalAlignment.Right;
+            // 
+            // lblLifeSkillCost
+            // 
+            lblLifeSkillCost.AutoSize = true;
+            lblLifeSkillCost.Location = new Point(16, 136);
+            lblLifeSkillCost.Name = "lblLifeSkillCost";
+            lblLifeSkillCost.Size = new Size(126, 20);
+            lblLifeSkillCost.TabIndex = 4;
+            lblLifeSkillCost.Text = "Costo de Life Skill";
             // 
             // txtProductionResult
             // 
@@ -207,5 +229,7 @@
         private TextBox txtProductionAmount;
         private Label lblProductionResult;
         private TextBox txtProductionResult;
+        private Label lblLifeSkillCost;
+        private TextBox txtLifeSkillCost;
     }
 }
