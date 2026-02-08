@@ -137,7 +137,7 @@ partial class Form1
         panelProduction.Location = new Point(3, 3);
         panelProduction.Name = "panelProduction";
         panelProduction.Padding = new Padding(16);
-        panelProduction.Size = new Size(746, 161);
+        panelProduction.Size = new Size(746, 131);
         panelProduction.TabIndex = 0;
         // 
         // tableLayoutProduction
@@ -145,7 +145,7 @@ partial class Form1
         tableLayoutProduction.AutoSize = true;
         tableLayoutProduction.AutoSizeMode = AutoSizeMode.GrowAndShrink;
         tableLayoutProduction.ColumnCount = 2;
-        tableLayoutProduction.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
+        tableLayoutProduction.ColumnStyles.Add(new ColumnStyle());
         tableLayoutProduction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 220F));
         tableLayoutProduction.Controls.Add(lblProductionAmount, 0, 0);
         tableLayoutProduction.Controls.Add(txtProductionAmount, 1, 0);
@@ -157,10 +157,10 @@ partial class Form1
         tableLayoutProduction.Location = new Point(16, 16);
         tableLayoutProduction.Name = "tableLayoutProduction";
         tableLayoutProduction.RowCount = 3;
-        tableLayoutProduction.RowStyles.Add(new RowStyle(SizeType.AutoSize));
-        tableLayoutProduction.RowStyles.Add(new RowStyle(SizeType.AutoSize));
-        tableLayoutProduction.RowStyles.Add(new RowStyle(SizeType.AutoSize));
-        tableLayoutProduction.Size = new Size(407, 129);
+        tableLayoutProduction.RowStyles.Add(new RowStyle());
+        tableLayoutProduction.RowStyles.Add(new RowStyle());
+        tableLayoutProduction.RowStyles.Add(new RowStyle());
+        tableLayoutProduction.Size = new Size(714, 99);
         tableLayoutProduction.TabIndex = 0;
         // 
         // lblProductionAmount
@@ -176,7 +176,7 @@ partial class Form1
         // txtProductionAmount
         // 
         txtProductionAmount.Anchor = AnchorStyles.Left;
-        txtProductionAmount.Location = new Point(190, 3);
+        txtProductionAmount.Location = new Point(181, 3);
         txtProductionAmount.Name = "txtProductionAmount";
         txtProductionAmount.Size = new Size(200, 27);
         txtProductionAmount.TabIndex = 1;
@@ -185,7 +185,7 @@ partial class Form1
         // lblProductionResult
         // 
         lblProductionResult.AutoSize = true;
-        lblProductionResult.Location = new Point(3, 43);
+        lblProductionResult.Location = new Point(3, 33);
         lblProductionResult.Name = "lblProductionResult";
         lblProductionResult.Size = new Size(160, 20);
         lblProductionResult.TabIndex = 2;
@@ -194,7 +194,7 @@ partial class Form1
         // txtProductionResult
         // 
         txtProductionResult.Anchor = AnchorStyles.Left;
-        txtProductionResult.Location = new Point(190, 46);
+        txtProductionResult.Location = new Point(181, 36);
         txtProductionResult.Name = "txtProductionResult";
         txtProductionResult.ReadOnly = true;
         txtProductionResult.Size = new Size(200, 27);
@@ -205,16 +205,16 @@ partial class Form1
         // 
         lblLifeSkillCost.Anchor = AnchorStyles.Left;
         lblLifeSkillCost.AutoSize = true;
-        lblLifeSkillCost.Location = new Point(3, 86);
+        lblLifeSkillCost.Location = new Point(3, 72);
         lblLifeSkillCost.Name = "lblLifeSkillCost";
-        lblLifeSkillCost.Size = new Size(126, 20);
+        lblLifeSkillCost.Size = new Size(127, 20);
         lblLifeSkillCost.TabIndex = 4;
         lblLifeSkillCost.Text = "Costo de Life Skill";
         // 
         // txtLifeSkillCost
         // 
         txtLifeSkillCost.Anchor = AnchorStyles.Left;
-        txtLifeSkillCost.Location = new Point(190, 89);
+        txtLifeSkillCost.Location = new Point(181, 69);
         txtLifeSkillCost.Name = "txtLifeSkillCost";
         txtLifeSkillCost.ReadOnly = true;
         txtLifeSkillCost.Size = new Size(200, 27);
@@ -237,6 +237,7 @@ partial class Form1
         tabMain.ResumeLayout(false);
         tabIllusionStrength.ResumeLayout(false);
         tabProduction.ResumeLayout(false);
+        tabProduction.PerformLayout();
         panelProduction.ResumeLayout(false);
         panelProduction.PerformLayout();
         tableLayoutProduction.ResumeLayout(false);
