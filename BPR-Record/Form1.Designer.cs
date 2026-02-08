@@ -36,10 +36,13 @@
             tabIllusionStrength = new TabPage();
             tabProduction = new TabPage();
             panelProduction = new Panel();
-            txtProductionResult = new TextBox();
-            lblProductionResult = new Label();
-            txtProductionAmount = new TextBox();
+            tableLayoutProduction = new TableLayoutPanel();
             lblProductionAmount = new Label();
+            txtProductionAmount = new TextBox();
+            lblProductionResult = new Label();
+            txtProductionResult = new TextBox();
+            lblLifeSkillCost = new Label();
+            txtLifeSkillCost = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dgvBattles).BeginInit();
             panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudPlayerPower).BeginInit();
@@ -47,6 +50,7 @@
             tabIllusionStrength.SuspendLayout();
             tabProduction.SuspendLayout();
             panelProduction.SuspendLayout();
+            tableLayoutProduction.SuspendLayout();
             SuspendLayout();
             // 
             // dgvBattles
@@ -126,51 +130,97 @@
             // 
             // panelProduction
             // 
-            panelProduction.Controls.Add(txtProductionResult);
-            panelProduction.Controls.Add(lblProductionResult);
-            panelProduction.Controls.Add(txtProductionAmount);
-            panelProduction.Controls.Add(lblProductionAmount);
+            panelProduction.AutoSize = true;
+            panelProduction.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            panelProduction.Controls.Add(tableLayoutProduction);
             panelProduction.Dock = DockStyle.Top;
             panelProduction.Location = new Point(3, 3);
             panelProduction.Name = "panelProduction";
             panelProduction.Padding = new Padding(16);
-            panelProduction.Size = new Size(746, 132);
+            panelProduction.Size = new Size(746, 161);
             panelProduction.TabIndex = 0;
+            // 
+            // tableLayoutProduction
+            // 
+            tableLayoutProduction.AutoSize = true;
+            tableLayoutProduction.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            tableLayoutProduction.ColumnCount = 2;
+            tableLayoutProduction.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
+            tableLayoutProduction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 220F));
+            tableLayoutProduction.Controls.Add(lblProductionAmount, 0, 0);
+            tableLayoutProduction.Controls.Add(txtProductionAmount, 1, 0);
+            tableLayoutProduction.Controls.Add(lblProductionResult, 0, 1);
+            tableLayoutProduction.Controls.Add(txtProductionResult, 1, 1);
+            tableLayoutProduction.Controls.Add(lblLifeSkillCost, 0, 2);
+            tableLayoutProduction.Controls.Add(txtLifeSkillCost, 1, 2);
+            tableLayoutProduction.Dock = DockStyle.Top;
+            tableLayoutProduction.Location = new Point(16, 16);
+            tableLayoutProduction.Name = "tableLayoutProduction";
+            tableLayoutProduction.RowCount = 3;
+            tableLayoutProduction.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+            tableLayoutProduction.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+            tableLayoutProduction.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+            tableLayoutProduction.Size = new Size(407, 129);
+            tableLayoutProduction.TabIndex = 0;
+            // 
+            // lblProductionAmount
+            // 
+            lblProductionAmount.Anchor = AnchorStyles.Left;
+            lblProductionAmount.AutoSize = true;
+            lblProductionAmount.Location = new Point(3, 0);
+            lblProductionAmount.Name = "lblProductionAmount";
+            lblProductionAmount.Size = new Size(172, 20);
+            lblProductionAmount.TabIndex = 0;
+            lblProductionAmount.Text = "Cantidad a producir (int)";
+            // 
+            // txtProductionAmount
+            // 
+            txtProductionAmount.Anchor = AnchorStyles.Left;
+            txtProductionAmount.Location = new Point(190, 3);
+            txtProductionAmount.Name = "txtProductionAmount";
+            txtProductionAmount.Size = new Size(200, 27);
+            txtProductionAmount.TabIndex = 1;
+            txtProductionAmount.TextAlign = HorizontalAlignment.Right;
+            // 
+            // lblProductionResult
+            // 
+            lblProductionResult.Anchor = AnchorStyles.Left;
+            lblProductionResult.AutoSize = true;
+            lblProductionResult.Location = new Point(3, 43);
+            lblProductionResult.Name = "lblProductionResult";
+            lblProductionResult.Size = new Size(160, 20);
+            lblProductionResult.TabIndex = 2;
+            lblProductionResult.Text = "Material necesario (x8)";
             // 
             // txtProductionResult
             // 
-            txtProductionResult.Location = new Point(16, 101);
+            txtProductionResult.Anchor = AnchorStyles.Left;
+            txtProductionResult.Location = new Point(190, 46);
             txtProductionResult.Name = "txtProductionResult";
             txtProductionResult.ReadOnly = true;
             txtProductionResult.Size = new Size(200, 27);
             txtProductionResult.TabIndex = 3;
             txtProductionResult.TextAlign = HorizontalAlignment.Right;
             // 
-            // lblProductionResult
+            // lblLifeSkillCost
             // 
-            lblProductionResult.AutoSize = true;
-            lblProductionResult.Location = new Point(16, 78);
-            lblProductionResult.Name = "lblProductionResult";
-            lblProductionResult.Size = new Size(160, 20);
-            lblProductionResult.TabIndex = 2;
-            lblProductionResult.Text = "Material necesario (x8)";
+            lblLifeSkillCost.Anchor = AnchorStyles.Left;
+            lblLifeSkillCost.AutoSize = true;
+            lblLifeSkillCost.Location = new Point(3, 86);
+            lblLifeSkillCost.Name = "lblLifeSkillCost";
+            lblLifeSkillCost.Size = new Size(126, 20);
+            lblLifeSkillCost.TabIndex = 4;
+            lblLifeSkillCost.Text = "Costo de Life Skill";
             // 
-            // txtProductionAmount
+            // txtLifeSkillCost
             // 
-            txtProductionAmount.Location = new Point(16, 43);
-            txtProductionAmount.Name = "txtProductionAmount";
-            txtProductionAmount.Size = new Size(200, 27);
-            txtProductionAmount.TabIndex = 1;
-            txtProductionAmount.TextAlign = HorizontalAlignment.Right;
-            // 
-            // lblProductionAmount
-            // 
-            lblProductionAmount.AutoSize = true;
-            lblProductionAmount.Location = new Point(16, 20);
-            lblProductionAmount.Name = "lblProductionAmount";
-            lblProductionAmount.Size = new Size(172, 20);
-            lblProductionAmount.TabIndex = 0;
-            lblProductionAmount.Text = "Cantidad a producir (int)";
+            txtLifeSkillCost.Anchor = AnchorStyles.Left;
+            txtLifeSkillCost.Location = new Point(190, 89);
+            txtLifeSkillCost.Name = "txtLifeSkillCost";
+            txtLifeSkillCost.ReadOnly = true;
+            txtLifeSkillCost.Size = new Size(200, 27);
+            txtLifeSkillCost.TabIndex = 5;
+            txtLifeSkillCost.TextAlign = HorizontalAlignment.Right;
             // 
             // Form1
             // 
@@ -190,6 +240,8 @@
             tabProduction.ResumeLayout(false);
             panelProduction.ResumeLayout(false);
             panelProduction.PerformLayout();
+            tableLayoutProduction.ResumeLayout(false);
+            tableLayoutProduction.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -203,9 +255,12 @@
         private TabPage tabIllusionStrength;
         private TabPage tabProduction;
         private Panel panelProduction;
+        private TableLayoutPanel tableLayoutProduction;
         private Label lblProductionAmount;
         private TextBox txtProductionAmount;
         private Label lblProductionResult;
         private TextBox txtProductionResult;
+        private Label lblLifeSkillCost;
+        private TextBox txtLifeSkillCost;
     }
 }
