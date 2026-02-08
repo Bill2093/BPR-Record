@@ -135,4 +135,9 @@ public partial class Form1 : Form
         int requiredMaterial = amount * 8;
         txtProductionResult.Text = requiredMaterial.ToString();
     }
+
+    private void Form1_Load(object sender, EventArgs e)
+    {
+
+    }
 }

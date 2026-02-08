@@ -36,10 +36,10 @@
             tabIllusionStrength = new TabPage();
             tabProduction = new TabPage();
             panelProduction = new Panel();
-            lblProductionAmount = new Label();
-            txtProductionAmount = new TextBox();
-            lblProductionResult = new Label();
             txtProductionResult = new TextBox();
+            lblProductionResult = new Label();
+            txtProductionAmount = new TextBox();
+            lblProductionAmount = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvBattles).BeginInit();
             panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudPlayerPower).BeginInit();
@@ -53,10 +53,10 @@
             // 
             dgvBattles.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvBattles.Dock = DockStyle.Fill;
-            dgvBattles.Location = new Point(0, 40);
+            dgvBattles.Location = new Point(3, 43);
             dgvBattles.Name = "dgvBattles";
             dgvBattles.RowHeadersWidth = 51;
-            dgvBattles.Size = new Size(792, 382);
+            dgvBattles.Size = new Size(746, 874);
             dgvBattles.TabIndex = 0;
             // 
             // panelTop
@@ -64,18 +64,17 @@
             panelTop.Controls.Add(nudPlayerPower);
             panelTop.Controls.Add(lblPlayerPower);
             panelTop.Dock = DockStyle.Top;
-            panelTop.Location = new Point(0, 0);
+            panelTop.Location = new Point(3, 3);
             panelTop.Name = "panelTop";
             panelTop.Padding = new Padding(8);
-            panelTop.Size = new Size(792, 40);
+            panelTop.Size = new Size(746, 40);
             panelTop.TabIndex = 1;
             // 
             // nudPlayerPower
             // 
             nudPlayerPower.Dock = DockStyle.Right;
-            nudPlayerPower.Location = new Point(664, 8);
+            nudPlayerPower.Location = new Point(618, 8);
             nudPlayerPower.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
-            nudPlayerPower.Minimum = new decimal(new int[] { 0, 0, 0, 0 });
             nudPlayerPower.Name = "nudPlayerPower";
             nudPlayerPower.Size = new Size(120, 27);
             nudPlayerPower.TabIndex = 0;
@@ -87,7 +86,7 @@
             lblPlayerPower.Dock = DockStyle.Left;
             lblPlayerPower.Location = new Point(8, 8);
             lblPlayerPower.Name = "lblPlayerPower";
-            lblPlayerPower.Size = new Size(122, 20);
+            lblPlayerPower.Size = new Size(128, 20);
             lblPlayerPower.TabIndex = 1;
             lblPlayerPower.Text = "Poder del jugador";
             // 
@@ -99,7 +98,7 @@
             tabMain.Location = new Point(0, 0);
             tabMain.Name = "tabMain";
             tabMain.SelectedIndex = 0;
-            tabMain.Size = new Size(800, 450);
+            tabMain.Size = new Size(760, 953);
             tabMain.TabIndex = 2;
             // 
             // tabIllusionStrength
@@ -109,7 +108,7 @@
             tabIllusionStrength.Location = new Point(4, 29);
             tabIllusionStrength.Name = "tabIllusionStrength";
             tabIllusionStrength.Padding = new Padding(3);
-            tabIllusionStrength.Size = new Size(792, 417);
+            tabIllusionStrength.Size = new Size(752, 920);
             tabIllusionStrength.TabIndex = 0;
             tabIllusionStrength.Text = "illusion Strenght";
             tabIllusionStrength.UseVisualStyleBackColor = true;
@@ -120,7 +119,7 @@
             tabProduction.Location = new Point(4, 29);
             tabProduction.Name = "tabProduction";
             tabProduction.Padding = new Padding(3);
-            tabProduction.Size = new Size(792, 417);
+            tabProduction.Size = new Size(752, 920);
             tabProduction.TabIndex = 1;
             tabProduction.Text = "Producción";
             tabProduction.UseVisualStyleBackColor = true;
@@ -135,34 +134,8 @@
             panelProduction.Location = new Point(3, 3);
             panelProduction.Name = "panelProduction";
             panelProduction.Padding = new Padding(16);
-            panelProduction.Size = new Size(786, 132);
+            panelProduction.Size = new Size(746, 132);
             panelProduction.TabIndex = 0;
-            // 
-            // lblProductionAmount
-            // 
-            lblProductionAmount.AutoSize = true;
-            lblProductionAmount.Location = new Point(16, 20);
-            lblProductionAmount.Name = "lblProductionAmount";
-            lblProductionAmount.Size = new Size(180, 20);
-            lblProductionAmount.TabIndex = 0;
-            lblProductionAmount.Text = "Cantidad a producir (int)";
-            // 
-            // txtProductionAmount
-            // 
-            txtProductionAmount.Location = new Point(16, 43);
-            txtProductionAmount.Name = "txtProductionAmount";
-            txtProductionAmount.Size = new Size(200, 27);
-            txtProductionAmount.TabIndex = 1;
-            txtProductionAmount.TextAlign = HorizontalAlignment.Right;
-            // 
-            // lblProductionResult
-            // 
-            lblProductionResult.AutoSize = true;
-            lblProductionResult.Location = new Point(16, 78);
-            lblProductionResult.Name = "lblProductionResult";
-            lblProductionResult.Size = new Size(195, 20);
-            lblProductionResult.TabIndex = 2;
-            lblProductionResult.Text = "Material necesario (x8)";
             // 
             // txtProductionResult
             // 
@@ -173,14 +146,41 @@
             txtProductionResult.TabIndex = 3;
             txtProductionResult.TextAlign = HorizontalAlignment.Right;
             // 
+            // lblProductionResult
+            // 
+            lblProductionResult.AutoSize = true;
+            lblProductionResult.Location = new Point(16, 78);
+            lblProductionResult.Name = "lblProductionResult";
+            lblProductionResult.Size = new Size(160, 20);
+            lblProductionResult.TabIndex = 2;
+            lblProductionResult.Text = "Material necesario (x8)";
+            // 
+            // txtProductionAmount
+            // 
+            txtProductionAmount.Location = new Point(16, 43);
+            txtProductionAmount.Name = "txtProductionAmount";
+            txtProductionAmount.Size = new Size(200, 27);
+            txtProductionAmount.TabIndex = 1;
+            txtProductionAmount.TextAlign = HorizontalAlignment.Right;
+            // 
+            // lblProductionAmount
+            // 
+            lblProductionAmount.AutoSize = true;
+            lblProductionAmount.Location = new Point(16, 20);
+            lblProductionAmount.Name = "lblProductionAmount";
+            lblProductionAmount.Size = new Size(172, 20);
+            lblProductionAmount.TabIndex = 0;
+            lblProductionAmount.Text = "Cantidad a producir (int)";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(760, 953);
             Controls.Add(tabMain);
             Name = "Form1";
-            Text = "Form1";
+            Text = "BPR Balance Calculator";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dgvBattles).EndInit();
             panelTop.ResumeLayout(false);
             panelTop.PerformLayout();
