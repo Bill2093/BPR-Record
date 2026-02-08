@@ -7,7 +7,20 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>balem.ico</ApplicationIcon>
+    <PackageIcon>balem.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="balem.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\OneDrive\Imágenes\Capturas de pantalla\balem.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="ReaLTaiizor" Version="3.8.1.5" />

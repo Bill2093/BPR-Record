@@ -28,6 +28,7 @@ partial class Form1
     /// </summary>
     private void InitializeComponent()
     {
+        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
         dgvBattles = new DataGridView();
         panelTop = new Panel();
         nudPlayerPower = new NumericUpDown();
@@ -227,6 +228,7 @@ partial class Form1
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(760, 953);
         Controls.Add(tabMain);
+        Icon = (Icon)resources.GetObject("$this.Icon");
         Name = "Form1";
         Text = "BPR Balance Calculator";
         Load += Form1_Load;
